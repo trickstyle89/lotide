@@ -8,6 +8,43 @@ const assertEqual = function(actual, expected) {
     console.log(`${devilEmoji} Assertion Failed: ${actual} !== ${expected} ${devilEmoji}`);
 };
 
-assertEqual(middle(arrayA), [3, 4]); // enter the expected here.
 
-function countOnly(array) {
+function countOnly(names, options) {
+  let results = {};
+  for (const name of names) {
+    if (options[name]) {
+      if (results[name]) {
+        results[name] += 1;
+      } else {
+        results[name] = 1;
+      }
+    }
+  }
+  return results;
+}
+
+const firstNames = [
+  "Karl",
+  "Salima",
+  "Agouhanna",
+  "Fang",
+  "Kavith",
+  "Jason",
+  "Salima",
+  "Fang",
+  "Joe"
+];
+  
+const countNames = {
+  "Jason": true,
+  "Karima": true,
+  "Fang": true,
+  "Agouhanna": false
+};
+  
+const countResults = countOnly(firstNames, countNames);
+  
+assertEqual(countResults["Jason"], 1);
+assertEqual(countResults["Karima"], undefined);
+assertEqual(countResults["Fang"], 2);
+assertEqual(countResults["Agouhanna"], undefined);
