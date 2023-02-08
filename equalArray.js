@@ -1,6 +1,6 @@
 const [node, script, arrayA, arrayB] = process.argv;
 
-function assertEqual(arrayA ,arrayB) {
+function equalArray(arrayA ,arrayB) {
   if (arrayA.length !== arrayB.length || arrayA === null || arrayB === null) {
     return false;
   }
