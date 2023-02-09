@@ -1,21 +1,5 @@
 const [node, script, arrayA, arrayB] = process.argv;
 
-function equalArray(arrayA ,arrayB) {
-  if (arrayA.length !== arrayB.length || arrayA === null || arrayB === null) {
-    return false;
-  }
-  for (let i = 0; i < arrayA.length; i++) {
-    if (arrayA[i] !== arrayB[i]) {
-      return false;
-    }
-    return true;
-  }
-}
-
-console.log(assertEqual(arrayA, arrayB));
-
-/*
-
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -31,4 +15,5 @@ const eqArrays = function(array1, array2) {
   }
   return true;
 };
-*/
+
+module.exports = eqArrays;

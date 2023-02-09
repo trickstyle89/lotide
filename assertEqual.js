@@ -1,9 +1,9 @@
 const assertEqual = function(actual, expected) {
-  const devilEmoji = "\uD83D\uDC7B";
-  const angelEmoji = "\uD83D\uDE07";
+  //const devilEmoji = "\uD83D\uDC7B";
+  //const angelEmoji = "\uD83D\uDE07";
   
   if (JSON.stringify(actual) === JSON.stringify(expected)) {
-    console.log(`${angelEmoji} Assertion Passed: ${actual} === ${expected} ${angelEmoji}`);
+    console.log(`✅  Assertion passed: ${actual} === ${expected}`);
   } else
-    console.log(`${devilEmoji} Assertion Failed: ${actual} !== ${expected} ${devilEmoji}`);
+    console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
 };
