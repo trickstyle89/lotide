@@ -1,8 +1,10 @@
-const head = function(...array) {
+const assertEqual = require('./assertEqual');
+
+const head = function(array) {
   if (array.length <= 1) {
-    console.log(undefined);
+    return array.toString();
   }
-  console.log((array[0][0]).toString());
+  return array.shift();
 };
-  
-head([1, 2, 3, 4, 5]);
+
+module.exports = head;

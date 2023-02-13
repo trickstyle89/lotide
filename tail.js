@@ -1,9 +1,9 @@
 const tail = function(array) {
   if (array.length === 0) {
-    console.log(undefined);
+    return undefined;
   }
   let resultArray = array.slice(1);
-  console.log(resultArray);
+  return resultArray;
 };
   
-tail(['1', '2', '3', '4', '5']);
+module.exports = tail;
