@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "kaivanchew",
   "version": "1.0.0",
-  "description": "LHL",
+  "description": "LHL Web Development student library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
